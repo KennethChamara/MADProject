@@ -11,14 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".testActivity"></activity>
         <activity android:name=".Dashboard">
             <intent-filter>
                 <action android:name=".Dashboard" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-
         </activity>
         <activity
             android:name=".MainActivity"
