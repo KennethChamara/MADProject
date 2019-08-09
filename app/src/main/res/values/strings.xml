@@ -1,5 +1,5 @@
-<resources>
-    <string name="app_name">BackRow</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="ExtraTranslation">BackRow</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_nav">nav</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -20,4 +20,7 @@
     <string name="adminMarkingportal">Admin Marking portal</string>
     <string name="marksbutton1">Add Marks</string>
     <string name="listmarksbutton">List Marks</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
