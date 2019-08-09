@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress DeprecatedClassUsageInspection -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@drawable/download"
+    android:padding="15dp">
+    <ImageView
+        android:src="@drawable/dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lyana Roy"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LyanaRoy98@gmail.com"
+        android:textColor="@color/white"
+
+        />
+</LinearLayout>

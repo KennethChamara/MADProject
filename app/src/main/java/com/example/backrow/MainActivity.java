@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,9 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
         if (user.getText().toString().equals("admin") && password.getText().toString().equals("admin") ) {
 
-            startActivity(new Intent(".Dashboard"));
+            startActivity(new Intent(".navgation"));
 
 
+
+        }else{
+
+            Toast.makeText(this,"Invalid User name or Password",Toast.LENGTH_SHORT).show();
 
         }
 

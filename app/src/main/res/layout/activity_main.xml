@@ -79,7 +79,7 @@
         android:layout_marginStart="137dp"
         android:layout_marginEnd="323dp"
         android:layout_marginBottom="126dp"
-        android:background="@android:color/holo_blue_bright"
+        android:background="#635A5A"
 
         android:onClick="onClick"
         android:text="Continue"
