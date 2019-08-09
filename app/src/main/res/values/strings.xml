@@ -17,4 +17,7 @@
     <string name="title_activity_navlayout">navlayout</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="adminMarkingportal">Admin Marking portal</string>
+    <string name="marksbutton1">Add Marks</string>
+    <string name="listmarksbutton">List Marks</string>
 </resources>
