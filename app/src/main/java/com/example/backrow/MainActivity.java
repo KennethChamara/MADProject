@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (user.getText().toString().equals("admin") && password.getText().toString().equals("admin") ) {
 
-            startActivity(new Intent(".navgation"));
+            startActivity(new Intent(".dash"));
 
 
 

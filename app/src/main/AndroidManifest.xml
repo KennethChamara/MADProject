@@ -11,6 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Listmarks"></activity>
+        <activity android:name=".submitmarks">
+            <intent-filter>
+                <action android:name=".submitmarks" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".adminmarkingportal">
+            <intent-filter>
+                <action android:name=".adminmarkingportal" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".navgation">
             <intent-filter>
                 <action android:name=".navgation" />
