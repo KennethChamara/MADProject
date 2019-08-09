@@ -11,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".myquiz"></activity>
+        <activity android:name=".studentquiz" />
         <activity android:name=".navgation">
             <intent-filter>
                 <action android:name=".navgation" />
