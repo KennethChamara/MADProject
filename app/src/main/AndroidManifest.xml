@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".noticePanel"></activity>
         <activity android:name=".navgation">
             <intent-filter>
                 <action android:name=".navgation" />
