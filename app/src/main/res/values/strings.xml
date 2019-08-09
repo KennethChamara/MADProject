@@ -21,4 +21,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagedesc">image details</string>
+    <string name="studentid">Student ID</string>
+    <string name="hint_studentId">Enter Student Id</string>
+    <string name="examname">Exam Name</string>
+    <string name="hint_examname">Enter Exam name</string>
+    <string name="buttonmarks">Submit</string>
+    <string name="exammarks">Exam Marks</string>
+    <string name="hintexammarks">Enter exam marks</string>
 </resources>

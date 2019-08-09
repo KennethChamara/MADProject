@@ -13,6 +13,21 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".myquiz"></activity>
         <activity android:name=".studentquiz" />
+        <activity android:name=".Listmarks"></activity>
+        <activity android:name=".submitmarks">
+            <intent-filter>
+                <action android:name=".submitmarks" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".adminmarkingportal">
+            <intent-filter>
+                <action android:name=".adminmarkingportal" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".navgation">
             <intent-filter>
                 <action android:name=".navgation" />
