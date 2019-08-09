@@ -21,6 +21,13 @@
     <string name="marksbutton1">Add Marks</string>
     <string name="listmarksbutton">List Marks</string>
 
+    <string name="m1">February: </string>
+    <string name="btn1">Week 01</string>
+    <string name="btn2">Week 02</string>
+    <string name="btn3">Week 03</string>
+    <string name="btn4">Week 04</string>
+    <string name="comment">Comment</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/db" android:title="notice" android:icon="@drawable/ic_insert_emoticon_black_24dp"/>
-    <item android:id="@+id/db1" android:title="notice1" android:icon="@drawable/ic_live_tv_black_24dp"/>
+    <item
+        android:id="@+id/db"
+        android:icon="@drawable/ic_insert_emoticon_black_24dp"
+        android:title="notice" />
+    <item android:id="@+id/db1" android:icon="@drawable/ic_live_tv_black_24dp" android:title="notice1" />
     <item android:id="@+id/db2" android:title="notice2" android:icon="@drawable/ic_keyboard_hide_black_24dp"/>
     <item android:id="@+id/db3" android:title="notice3" android:icon="@drawable/ic_accessibility_black_24dp"/>
     <item android:id="@+id/db4" android:title="notice4" android:icon="@drawable/ic_language_black_24dp"/>
