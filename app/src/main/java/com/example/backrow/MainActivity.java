@@ -2,19 +2,11 @@ package com.example.backrow;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         }else{
+            if(user.getText().toString().equals("student") && password.getText().toString().equals("1234"))
+            {
+
+                startActivity(new Intent(".navgation"));
+
+            }
 
             Toast.makeText(this,"Invalid User name or Password",Toast.LENGTH_SHORT).show();
 

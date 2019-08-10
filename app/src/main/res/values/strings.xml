@@ -29,4 +29,7 @@
     <string name="buttonmarks">Submit</string>
     <string name="exammarks">Exam Marks</string>
     <string name="hintexammarks">Enter exam marks</string>
+    <string name="listmarksbutton">List Marks</string>
+    <string name="marksbutton1">ADD</string>
+    <string name="adminMarkingportal">Marks</string>
 </resources>
