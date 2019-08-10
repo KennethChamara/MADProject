@@ -17,9 +17,7 @@
     <string name="title_activity_navlayout">navlayout</string>
     <string name="open">open</string>
     <string name="close">close</string>
-    <string name="adminMarkingportal">Admin Marking portal</string>
-    <string name="marksbutton1">Add Marks</string>
-    <string name="listmarksbutton">List Marks</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -34,4 +32,14 @@
     <string name="updatedeletebutton">Update/Delete</string>
     <string name="updatemarks">Update</string>
     <string name="deletemarks">Delete</string>
+    <string name="listmarksbutton">List Marks</string>
+    <string name="marksbutton1">ADD</string>
+    <string name="adminMarkingportal">Marks</string>
+    <string name="noticetitle">Notice Title</string>
+    <string name="noticedes">this is notice description, this feld can be used for disply notise about classa and details about exams</string>
+    <string name="name">Mr. Anuradha</string>
+    <string name="date">09/08/2019</string>
+    <string name="noticediscription">Description</string>
+    <string name="addnotice">Add</string>
+    <string name="reset">Reset</string>
 </resources>
