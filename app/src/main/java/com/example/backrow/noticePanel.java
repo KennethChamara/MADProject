@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,12 +12,16 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class noticePanel extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE = "com.example.backrow.MESSAGE";
     ListView listView;
     String ntitle[] = {"Notice 01","Notice 02","Notice 03","Notice 04"};
     String ndis[] = {"notice discription 01 this is samplae data","notice discription 02 this is samplae data"
@@ -34,10 +39,10 @@ public class noticePanel extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(noticePanel.this,ntitle[i],Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(noticePanel.this,displayNotice.class);
+                intent.putExtra(EXTRA_MESSAGE, ntitle[i]); startActivity(intent);
             }
         });
-
     }
 
     class myAdapter extends ArrayAdapter<String>{
