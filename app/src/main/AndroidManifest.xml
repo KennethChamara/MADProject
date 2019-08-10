@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Listmarks"></activity>
+        <activity android:name=".updatedeletemarks"></activity>
         <activity android:name=".submitmarks">
             <intent-filter>
                 <action android:name=".submitmarks" />

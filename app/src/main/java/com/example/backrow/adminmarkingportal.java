@@ -16,7 +16,7 @@ public class adminmarkingportal extends AppCompatActivity {
         setContentView(R.layout.activity_adminmarkingportal);
 
         bt1=(Button)findViewById(R.id.button1);
-        // bt2=(Button)findViewById(R.id.button2);
+         bt2=(Button)findViewById(R.id.button2);
 
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,6 +25,15 @@ public class adminmarkingportal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(adminmarkingportal.this,updatedeletemarks.class );
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

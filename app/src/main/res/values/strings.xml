@@ -31,4 +31,7 @@
     <string name="buttonmarks">Submit</string>
     <string name="exammarks">Exam Marks</string>
     <string name="hintexammarks">Enter exam marks</string>
+    <string name="updatedeletebutton">Update/Delete</string>
+    <string name="updatemarks">Update</string>
+    <string name="deletemarks">Delete</string>
 </resources>
