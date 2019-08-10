@@ -43,8 +43,23 @@ public class navgation extends AppCompatActivity {
 
                     case  R.id.db:
                     startActivity(new Intent(navgation.this, studentquiz.class));
-                    case R.id.db1  :
+                    break;
+
+                    case R.id.db2  :
                         startActivity(new Intent(navgation.this, noticePanel.class));
+                        break;
+
+                    case R.id.db1  :
+                        startActivity(new Intent(navgation.this, VideoActivity2.class));
+                        break;
+
+                    case R.id.db3  :
+                        startActivity(new Intent(navgation.this, listMarks.class));
+                        break;
+
+                    case R.id.db4  :
+                        startActivity(new Intent(navgation.this, MainActivity.class));
+                        break;
 
                 }
 

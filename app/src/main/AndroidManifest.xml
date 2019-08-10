@@ -11,8 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".VideoActivity2"></activity>
-        <activity android:name=".VideoActivity1" >
+        <activity android:name=".VideoActivity2_Admin"></activity>
+        <activity android:name=".VideoActivity1_Admin" >
+
+
+        </activity>
+        <activity android:name=".VideoActivity2" />
+        <activity android:name=".VideoActivity1">
             <intent-filter>
                 <action android:name=".VideoActivity1" />
 
@@ -24,14 +29,12 @@
         </activity>
         <activity android:name=".addNotice" />
         <activity android:name=".listMarks"></activity>
-        <activity android:name=".adminNoticeNavigation"></activity>
-        <activity android:name=".addNotice" />
+
         <activity android:name=".displayNotice" />
-        <activity android:name=".noticePanel"></activity>
+
         <activity android:name=".myquiz" />
         <activity android:name=".updatedeletemarks" />
-        <activity android:name=".myquiz" />
-        <activity android:name=".updatedeletemarks" />
+
         <activity android:name=".studentquiz" />
         <activity android:name=".submitmarks">
             <intent-filter>
