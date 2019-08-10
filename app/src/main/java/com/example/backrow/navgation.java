@@ -42,7 +42,8 @@ public class navgation extends AppCompatActivity {
 
                     case  R.id.db:
                     startActivity(new Intent(navgation.this, studentquiz.class));
-
+                    case R.id.db1  :
+                        startActivity(new Intent(navgation.this, noticePanel.class));
 
                 }
 
