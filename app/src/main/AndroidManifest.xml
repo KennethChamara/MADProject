@@ -20,6 +20,33 @@
             </intent-filter>
         </activity>
         <activity android:name=".noticePanel" />
+        <activity android:name=".adminNoticeNavigation">
+        </activity>
+        <activity android:name=".addNotice" />
+        <activity android:name=".listMarks"></activity>
+        <activity android:name=".adminNoticeNavigation"></activity>
+        <activity android:name=".addNotice" />
+        <activity android:name=".displayNotice" />
+        <activity android:name=".noticePanel"></activity>
+        <activity android:name=".myquiz" />
+        <activity android:name=".updatedeletemarks" />
+        <activity android:name=".myquiz" />
+        <activity android:name=".updatedeletemarks" />
+        <activity android:name=".studentquiz" />
+        <activity android:name=".submitmarks">
+            <intent-filter>
+                <action android:name=".submitmarks" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".adminmarkingportal">
+            <intent-filter>
+                <action android:name=".adminmarkingportal" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".navgation">
             <intent-filter>
                 <action android:name=".navgation" />

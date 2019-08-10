@@ -17,9 +17,7 @@
     <string name="title_activity_navlayout">navlayout</string>
     <string name="open">open</string>
     <string name="close">close</string>
-    <string name="adminMarkingportal">Admin Marking portal</string>
-    <string name="marksbutton1">Add Marks</string>
-    <string name="listmarksbutton">List Marks</string>
+
 
     <string name="m1">February: </string>
     <string name="btn1">Week 01</string>
@@ -30,4 +28,28 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagedesc">image details</string>
+    <string name="studentid">Student ID</string>
+    <string name="hint_studentId">Enter Student Id</string>
+    <string name="examname">Exam Name</string>
+    <string name="hint_examname">Enter Exam name</string>
+    <string name="buttonmarks">Submit</string>
+    <string name="exammarks">Exam Marks</string>
+    <string name="hintexammarks">Enter exam marks</string>
+    <string name="updatedeletebutton">Update/Delete</string>
+    <string name="updatemarks">Update</string>
+    <string name="deletemarks">Delete</string>
+    <string name="listmarksbutton">List Marks</string>
+    <string name="marksbutton1">ADD</string>
+    <string name="adminMarkingportal">Marks</string>
+    <string name="noticetitle">Notice Title</string>
+    <string name="noticedes">this is notice description, this feld can be used for display notice about class and details about exams.</string>
+    <string name="name">Mr. Anuradha</string>
+    <string name="date">09/08/2019</string>
+    <string name="noticediscription">Description</string>
+    <string name="addnotice">Add</string>
+    <string name="reset">Reset</string>
+    <string name="addnoticeforbutton">Add Notice</string>
+    <string name="listnoticeforbutton">List Notice</string>
+    <string name="imagedesczzz">image for title</string>
 </resources>

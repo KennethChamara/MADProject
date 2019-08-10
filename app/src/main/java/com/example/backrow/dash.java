@@ -20,4 +20,18 @@ public class dash extends AppCompatActivity {
 
 
     }
+
+    public void onClickMarks(View view){
+
+        startActivity(new Intent(".adminmarkingportal"));
+
+
+    }
+
+    public void onClicknotice(View view){
+
+        startActivity(new Intent(dash.this,adminNoticeNavigation.class));
+
+
+    }
 }
