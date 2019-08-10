@@ -1,6 +1,6 @@
 package com.example.backrow;
 
-import android.provider.BaseColumns
+import android.provider.BaseColumns;
 
 public class QuizContract {
 
@@ -14,6 +14,4 @@ public class QuizContract {
         public static final String COLUM_OPTION3 = "questions3";
         public static final String COLUM_ANSWER_NR = "answer_nr";
     }
-
-
 }

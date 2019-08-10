@@ -33,10 +33,13 @@
     <string name="marksbutton1">ADD</string>
     <string name="adminMarkingportal">Marks</string>
     <string name="noticetitle">Notice Title</string>
-    <string name="noticedes">this is notice description, this feld can be used for disply notise about classa and details about exams</string>
+    <string name="noticedes">this is notice description, this feld can be used for display notice about class and details about exams.</string>
     <string name="name">Mr. Anuradha</string>
     <string name="date">09/08/2019</string>
     <string name="noticediscription">Description</string>
     <string name="addnotice">Add</string>
     <string name="reset">Reset</string>
+    <string name="addnoticeforbutton">Add Notice</string>
+    <string name="listnoticeforbutton">List Notice</string>
+    <string name="imagedesczzz">image for title</string>
 </resources>

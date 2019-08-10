@@ -24,8 +24,10 @@ public class noticePanel extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.backrow.MESSAGE";
     ListView listView;
     String ntitle[] = {"Notice 01","Notice 02","Notice 03","Notice 04"};
-    String ndis[] = {"notice discription 01 this is samplae data","notice discription 02 this is samplae data"
-            ,"notice discription 03 this is samplae data","notice discription 04 this is samplae data"};
+    String ndis[] = {"notice discription 01 this is samplae data, If database is connected data can be fetched from database",
+            "notice discription 02 this is samplae data, If database is connected data can be fetched from database",
+            "notice discription 03 this is samplae data, If database is connected data can be fetched from database",
+            "notice discription 04 this is samplae data, If database is connected data can be fetched from database"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
