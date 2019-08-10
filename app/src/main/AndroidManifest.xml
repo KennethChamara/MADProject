@@ -17,8 +17,10 @@
         <activity android:name=".displayNotice" />
         <activity android:name=".noticePanel"></activity>
         <activity android:name=".myquiz" />
+        <activity android:name=".updatedeletemarks"></activity>
+        <activity android:name=".myquiz"></activity>
         <activity android:name=".studentquiz" />
-        <activity android:name=".Listmarks" />
+        <activity android:name=".Listmarks"></activity>
         <activity android:name=".submitmarks">
             <intent-filter>
                 <action android:name=".submitmarks" />
