@@ -11,16 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".adminNoticeNavigation">
-        </activity>
-        <activity android:name=".addNotice"></activity>
+        <activity android:name=".listMarks"></activity>
+        <activity android:name=".adminNoticeNavigation"></activity>
+        <activity android:name=".addNotice" />
         <activity android:name=".displayNotice" />
-        <activity android:name=".noticePanel"></activity>
+        <activity android:name=".noticePanel" />
         <activity android:name=".myquiz" />
-        <activity android:name=".updatedeletemarks"></activity>
-        <activity android:name=".myquiz"></activity>
+        <activity android:name=".updatedeletemarks" />
+        <activity android:name=".myquiz" />
         <activity android:name=".studentquiz" />
-        <activity android:name=".Listmarks"></activity>
+        <activity android:name=".Listmarks" />
         <activity android:name=".submitmarks">
             <intent-filter>
                 <action android:name=".submitmarks" />
