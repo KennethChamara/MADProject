@@ -9,11 +9,26 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".myquiz"></activity>
-        <activity android:name=".studentquiz" />
-        <activity android:name=".Listmarks"></activity>
+        <activity android:name=".myquiz">
+            <intent-filter>
+                <action android:name=".myquiz" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".studentquiz" >
+            <intent-filter>
+                <action android:name=".studentquiz" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+
+        </activity>
+        <activity android:name=".Listmarks"/>
         <activity android:name=".submitmarks">
             <intent-filter>
                 <action android:name=".submitmarks" />

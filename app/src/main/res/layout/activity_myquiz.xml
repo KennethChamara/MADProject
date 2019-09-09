@@ -72,7 +72,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/bottom_confirm_next"
+        android:id="@+id/button_confirm_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/radio_group"

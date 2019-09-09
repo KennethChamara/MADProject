@@ -39,4 +39,8 @@
     <string name="noticediscription">Description</string>
     <string name="addnotice">Add</string>
     <string name="reset">Reset</string>
+
+    <string name="txtViewHighscore">text_view_highscore</string>
+
+
 </resources>

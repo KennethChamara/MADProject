@@ -3,9 +3,9 @@ package com.example.backrow;
 public class Question {
 
     private String question;
-    private String opton1;
-    private String opton2;
-    private String opton3;
+    private String option1;
+    private String option2;
+    private String option3;
     private int answerNr;
 
 
@@ -15,6 +15,7 @@ public class Question {
 
     }
 
+
     public String getQuestion() {
         return question;
     }
@@ -23,28 +24,28 @@ public class Question {
         this.question = question;
     }
 
-    public String getOpton1() {
-        return opton1;
+    public String getOption1() {
+        return option1;
     }
 
-    public void setOpton1(String opton1) {
-        this.opton1 = opton1;
+    public void setOption1(String option1) {
+        this.option1 = option1;
     }
 
-    public String getOpton2() {
-        return opton2;
+    public String getOption2() {
+        return option2;
     }
 
-    public void setOpton2(String opton2) {
-        this.opton2 = opton2;
+    public void setOption2(String option2) {
+        this.option2 = option2;
     }
 
-    public String getOpton3() {
-        return opton3;
+    public String getOption3() {
+        return option3;
     }
 
-    public void setOpton3(String opton3) {
-        this.opton3 = opton3;
+    public void setOption3(String option3) {
+        this.option3 = option3;
     }
 
     public int getAnswerNr() {
@@ -55,13 +56,11 @@ public class Question {
         this.answerNr = answerNr;
     }
 
-    public Question(String question, String opton1, String opton2, String opton3, int answerNr) {
+    public Question(String question, String option1, String option2, String option3, int answerNr) {
         this.question = question;
-        this.opton1 = opton1;
-        this.opton2 = opton2;
-        this.opton3 = opton3;
+        this.option1 = option1;
+        this.option2 = option2;
+        this.option3 = option3;
         this.answerNr = answerNr;
     }
-
-
 }

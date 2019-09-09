@@ -1,6 +1,6 @@
 package com.example.backrow;
 
-import android.provider.BaseColumns
+import android.provider.BaseColumns;
 
 public class QuizContract {
 
