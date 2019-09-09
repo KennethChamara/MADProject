@@ -19,6 +19,34 @@
     <string name="close">close</string>
 
 
+    <string name="m1">February: </string>
+    <string name="m2">March: </string>
+    <string name="m3">April: </string>
+
+    <string name="btn1">Week 01</string>
+    <string name="btn2">Week 02</string>
+    <string name="btn3">Week 03</string>
+    <string name="btn4">Week 04</string>
+    <string name="btn9">Week 01</string>
+    <string name="btn10">Week 02</string>
+    <string name="btn11">Week 03</string>
+    <string name="btn12">Week 04</string>
+
+    <string name="comment">Add Comment</string>
+    <string name="commentSec">Comments</string>
+    <string name="btn5">Delete Viedeo</string>
+    <string name="btn6">Update Viedeo</string>
+    <string name="btn7">Upload New Video</string>
+    <string name="btn8">Upload</string>
+    <string name="adminTxt">Manage Viedeo</string>
+    <string name="adminTxt2">Upload Video</string>
+    <string name="adminTxt3">Lesson name</string>
+    <string name="adminTxt4">Date</string>
+    <string name="adminTxt5">Week</string>
+    <string name="adminTxt6">Description</string>
+    <string name="adminTxt7">Week 1 - Lesson name and description</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="imagedesc">image details</string>
@@ -29,18 +57,20 @@
     <string name="buttonmarks">Submit</string>
     <string name="exammarks">Exam Marks</string>
     <string name="hintexammarks">Enter exam marks</string>
+    <string name="updatedeletebutton">Update/Delete</string>
+    <string name="updatemarks">Update</string>
+    <string name="deletemarks">Delete</string>
     <string name="listmarksbutton">List Marks</string>
     <string name="marksbutton1">ADD</string>
     <string name="adminMarkingportal">Marks</string>
     <string name="noticetitle">Notice Title</string>
-    <string name="noticedes">this is notice description, this feld can be used for disply notise about classa and details about exams</string>
+    <string name="noticedes">this is notice description, this feld can be used for display notice about class and details about exams.</string>
     <string name="name">Mr. Anuradha</string>
     <string name="date">09/08/2019</string>
     <string name="noticediscription">Description</string>
     <string name="addnotice">Add</string>
     <string name="reset">Reset</string>
-
-    <string name="txtViewHighscore">text_view_highscore</string>
-
-
+    <string name="addnoticeforbutton">Add Notice</string>
+    <string name="listnoticeforbutton">List Notice</string>
+    <string name="imagedesczzz">image for title</string>
 </resources>
