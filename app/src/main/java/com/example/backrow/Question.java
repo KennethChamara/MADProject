@@ -2,12 +2,20 @@ package com.example.backrow;
 
 public class Question {
 
+    private String id =null;
     private String question;
     private String option1;
     private String option2;
     private String option3;
     private int answerNr;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Question(){
 
@@ -57,6 +65,7 @@ public class Question {
     }
 
     public Question(String question, String option1, String option2, String option3, int answerNr) {
+
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;

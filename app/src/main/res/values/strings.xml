@@ -18,6 +18,17 @@
     <string name="open">open</string>
     <string name="close">close</string>
 
+    <string name="question">Enter a question</string>
+    <string name="answeA">Enter a Answer A</string>
+    <string name="answerB">Enter a Answer B</string>
+    <string name="answerC">Enter a Answer C</string>
+    <string name="Answer">Enter a Correct Answer</string>
+
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="show">Show</string>
+    <string name="add">Add</string>
+
 
     <string name="m1">February: </string>
     <string name="m2">March: </string>
@@ -73,4 +84,8 @@
     <string name="addnoticeforbutton">Add Notice</string>
     <string name="listnoticeforbutton">List Notice</string>
     <string name="imagedesczzz">image for title</string>
+    <string name="btnInsert">Insert</string>
+    <string name="btnchange">Change</string>
+    <string name="btnList">LIST</string>
+    <string name="txtId">Enter ID</string>
 </resources>

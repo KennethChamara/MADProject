@@ -7,16 +7,16 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".VideoActivity2_Admin"></activity>
-        <activity android:name=".VideoActivity1_Admin" >
-
-
-        </activity>
+        <activity android:name=".Quiz_opition"></activity>
+        <activity android:name=".ListQuiz" />
+        <activity android:name=".addQuiz" />
+        <activity android:name=".VideoActivity2_Admin" />
+        <activity android:name=".VideoActivity1_Admin" />
         <activity android:name=".VideoActivity2" />
         <activity android:name=".VideoActivity1">
             <intent-filter>
@@ -26,17 +26,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".noticePanel" />
-        <activity android:name=".adminNoticeNavigation">
-        </activity>
+        <activity android:name=".adminNoticeNavigation" />
         <activity android:name=".addNotice" />
-        <activity android:name=".listMarks"></activity>
-
+        <activity android:name=".listMarks" />
         <activity android:name=".displayNotice" />
-
-
         <activity android:name=".updatedeletemarks" />
-
-
         <activity android:name=".myquiz">
             <intent-filter>
                 <action android:name=".myquiz" />
@@ -44,16 +38,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".studentquiz" >
+        <activity android:name=".studentquiz">
             <intent-filter>
                 <action android:name=".studentquiz" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-
         </activity>
-
         <activity android:name=".submitmarks">
             <intent-filter>
                 <action android:name=".submitmarks" />
