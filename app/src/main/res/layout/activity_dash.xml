@@ -102,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Upload Tute"
+                    android:text="Manege Users"
                     android:textStyle="bold" />
 
                 <View
@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="add tute Notices"
+                    android:text="Add,Update,Delete Users"
                     android:textColor="@android:color/holo_blue_dark" />
 
 
