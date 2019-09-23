@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Quiz_opition"></activity>
+        <activity android:name=".User_Option"></activity>
+        <activity android:name=".List_Users" />
+        <activity android:name=".User_Manger" />
+        <activity android:name=".Quiz_opition" />
         <activity android:name=".ListQuiz" />
         <activity android:name=".addQuiz" />
         <activity android:name=".VideoActivity2_Admin" />

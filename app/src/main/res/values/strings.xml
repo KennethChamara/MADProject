@@ -88,4 +88,13 @@
     <string name="btnchange">Change</string>
     <string name="btnList">LIST</string>
     <string name="txtId">Enter ID</string>
+
+    <string name="txtManegeView">User Manegment</string>
+    <string name="txtUserName">Enter User Name</string>
+    <string name="txtUserEmail">Enter Email</string>
+    <string name="txtUserPassword">Enter Pasword</string>
+    <string name="txtUserRole">Enter Role</string>
+    <string name="txtUserGender">Enter Gender</string>
+
+
 </resources>

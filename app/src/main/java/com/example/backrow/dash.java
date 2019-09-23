@@ -41,5 +41,13 @@ public class dash extends AppCompatActivity {
 
     }
 
+    public void onClickUser(View view){
+
+        startActivity(new Intent(dash.this,User_Option.class));
+
+
+    }
+
+
 
 }
