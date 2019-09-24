@@ -1,10 +1,10 @@
 package com.example.backrow;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class dash extends AppCompatActivity {
 
@@ -34,6 +34,20 @@ public class dash extends AppCompatActivity {
 
 
     }
+    public void onClickQuiz(View view){
+
+        startActivity(new Intent(dash.this,Quiz_opition.class));
+
+
+    }
+
+    public void onClickUser(View view){
+
+        startActivity(new Intent(dash.this,User_Option.class));
+
+
+    }
+
 
 
 }

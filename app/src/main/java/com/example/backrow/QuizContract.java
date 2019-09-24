@@ -8,6 +8,7 @@ public class QuizContract {
 
     public  static class  QuestionsTable implements  BaseColumns {
         public static final String TABLE_NAME = "quiz_questions";
+        public static final String _ID="_id";
         public static final String COLUM_QUESTION = "questions";
         public static final String COLUM_OPTION1 = "questions1";
         public static final String COLUM_OPTION2 = "questions2";

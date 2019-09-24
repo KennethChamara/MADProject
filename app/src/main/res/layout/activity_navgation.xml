@@ -23,11 +23,6 @@
 
     </com.google.android.material.navigation.NavigationView>
 
-    <fragment
 
-        android:name="com.example.backrow.studentquiz"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="MissingId" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

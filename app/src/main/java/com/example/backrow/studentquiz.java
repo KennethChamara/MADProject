@@ -3,20 +3,14 @@ package com.example.backrow;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
-import static android.content.Context.MODE_PRIVATE;
-
-public class studentquiz extends Fragment {
+public class studentquiz extends AppCompatActivity {
 
     private static final int REQUEST_CODE_QUIZ = 1 ;
 
@@ -27,22 +21,19 @@ public class studentquiz extends Fragment {
 
     private int highscore;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        return inflater.inflate(R.layout.activity_studentquiz, container, false);
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-      super.onActivityCreated(savedInstanceState);
+        setContentView(R.layout.activity_studentquiz);
 
 
-        textViewHighscore = getView().findViewById(R.id.text_view_highscore);
+
+
+        textViewHighscore = findViewById(R.id.text_view_highscore);
         loadHighscore();
 
-        Button buttonStartQuiz = getView().findViewById(R.id.button_start_quiz);
+        Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
         buttonStartQuiz.setOnClickListener(new View.OnClickListener(){
 
             public  void onClick(View v){
@@ -56,7 +47,7 @@ public class studentquiz extends Fragment {
     }
 
     private void startQuiz(){
-        Intent intent = new Intent(getActivity(),myquiz.class);
+        Intent intent = new Intent(getApplicationContext(),myquiz.class);
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
 
     }
@@ -77,7 +68,7 @@ public class studentquiz extends Fragment {
     }
 
     private void loadHighscore(){
-        SharedPreferences prefs = this.getActivity().getSharedPreferences(SHARED_PREPS,MODE_PRIVATE);
+        SharedPreferences prefs = this.getSharedPreferences(SHARED_PREPS,MODE_PRIVATE);
         highscore = prefs.getInt(KEY_HIGHSCORE,0);
         textViewHighscore.setText("Highscore: "+highscore);
     }
@@ -87,7 +78,7 @@ public class studentquiz extends Fragment {
 
         textViewHighscore.setText("Highscore: "+highscore);
 
-        SharedPreferences prefs = this.getActivity().getSharedPreferences(SHARED_PREPS,MODE_PRIVATE);
+        SharedPreferences prefs = this.getSharedPreferences(SHARED_PREPS,MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(KEY_HIGHSCORE,highscore);
         editor.apply();
