@@ -50,7 +50,7 @@ public class navgation extends AppCompatActivity {
                         break;
 
                     case R.id.db1  :
-                        startActivity(new Intent(navgation.this, VideoActivity2.class));
+                        startActivity(new Intent(navgation.this, VideoActivity1.class));
                         break;
 
                     case R.id.db3  :

@@ -16,7 +16,7 @@ public class dash extends AppCompatActivity {
 
     public void onClickVideo(View view){
 
-        startActivity(new Intent( ".VideoActivity1"));
+        startActivity(new Intent( this,VideoActivity1_Admin.class));
 
 
     }
