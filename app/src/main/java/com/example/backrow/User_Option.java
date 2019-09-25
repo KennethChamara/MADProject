@@ -23,18 +23,18 @@ public class User_Option extends AppCompatActivity {
         btnList = findViewById(R.id.btnUserlist);
 
 
-        btnManege.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),User_Manger.class));
-            }
-        });
-        btnList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),List_Users.class));
-            }
-        });
+//        btnManege.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(),User_Manger.class));
+//            }
+//        });
+//        btnList.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(),List_Users.class));
+//            }
+//        });
     }
 
     @Override

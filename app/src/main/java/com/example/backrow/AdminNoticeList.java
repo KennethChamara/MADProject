@@ -2,6 +2,9 @@ package com.example.backrow;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -15,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -24,9 +28,8 @@ public class AdminNoticeList extends AppCompatActivity {
     public static final String EXTRA_MESSAGE_ID = "com.example.backrow.ID";
     NoticeDBhelper db = new NoticeDBhelper(this);
     ListView listView;
-    String ntitle[];
-    String ndis[];
-    String ID[];
+    ArrayList<String> ntitle,ndis,ID;
+    ArrayList<Bitmap> bitmaps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,18 +38,22 @@ public class AdminNoticeList extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ID = new ArrayList<String>();
+        ntitle  = new ArrayList<String>();
+        ndis = new ArrayList<String>();
+        bitmaps = new ArrayList<Bitmap>();
         listView = findViewById(R.id.listview);
 
         setvaluse();
 
-        myAdapter adapter = new myAdapter(this, ntitle, ndis);
+        myAdapter adapter = new myAdapter(this, ntitle, ndis,bitmaps);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(AdminNoticeList.this,AdminDisplayNotice.class);
-                intent.putExtra(EXTRA_MESSAGE_ID, ID[i]);
+                intent.putExtra(EXTRA_MESSAGE_ID, ID.get(i));
                 startActivity(intent);
             }
         });
@@ -64,40 +71,37 @@ public class AdminNoticeList extends AppCompatActivity {
     }
 
     public void setvaluse() {
-        ArrayList<String> list = db.readAllNotice("TITLE");
-        ArrayList<String> list2 = db.readAllNotice("DES");
-        ArrayList<String> IDlist = db.readAllNotice("ID");
+        Cursor cursor = db.readAllNotice();
 
-        ntitle = new String[list.size()];
+        while(cursor.moveToNext()){
+            String id = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice._ID));
+            String title = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_TITLE));
+            String Des = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_DESCRIPTION));
+            byte[] img = cursor.getBlob(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_IMAGE));
 
-        for (int j = 0; j < list.size(); j++) {
-            ntitle[j] = list.get(j);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(img,0,img.length);
+
+            ID.add(id);
+            ntitle.add(title);
+            ndis.add(Des);
+            bitmaps.add(bitmap);
         }
-
-        ndis = new String[list2.size()];
-
-        for (int j = 0; j < list2.size(); j++) {
-            ndis[j] = list2.get(j);
-        }
-
-        ID = new String[IDlist.size()];
-        for (int j = 0; j < IDlist.size(); j++) {
-            ID[j] = IDlist.get(j);
-        }
-
+        cursor.close();
     }
 
     class myAdapter extends ArrayAdapter<String> {
 
         Context context;
-        String title[];
-        String description[];
+        ArrayList<String> title;
+        ArrayList<String> description;
+        ArrayList<Bitmap> bitmaps;
 
-        myAdapter(Context c,String t[],String des[]){
+        myAdapter(Context c,ArrayList<String> t,ArrayList<String> des,ArrayList<Bitmap> bitmaps){
             super(c,R.layout.rownotice,R.id.user_notice_title,t);
             this.context = c;
             this.title = t;
             this.description = des;
+            this.bitmaps = bitmaps;
         }
 
         @NonNull
@@ -107,8 +111,10 @@ public class AdminNoticeList extends AppCompatActivity {
             View row = layoutInflater.inflate(R.layout.rownotice,parent,false);
             TextView mytitle = row.findViewById(R.id.user_notice_title);
             TextView des = row.findViewById(R.id.ndis);
-            mytitle.setText(title[position]);
-            des.setText(description[position]);
+            ImageView img = row.findViewById(R.id.notice_disply_img);
+            mytitle.setText(title.get(position));
+            des.setText(description.get(position));
+            img.setImageBitmap(bitmaps.get(position));
             return row;
         }
     }

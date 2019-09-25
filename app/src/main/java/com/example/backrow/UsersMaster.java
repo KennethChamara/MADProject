@@ -12,5 +12,7 @@ public class UsersMaster {
         public static final String COLUMN_NAME_TITLE = "username";
         public static final String COLUMN_NAME_DESCRIPTION = "password";
         public static final String COLUMN_NAME_DATE = "date_";
+        public static final String COLUMN_NAME_IMAGE = "image_";
+
     }
 }

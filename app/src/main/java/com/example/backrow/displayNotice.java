@@ -33,10 +33,10 @@ public class displayNotice extends AppCompatActivity {
 
     }
     public void getvalue(){
-
-        title=db.getNoticeValue(ID,"TITLE");
-        content=db.getNoticeValue(ID,"DES");
-        postby="Mr.Avishka";
-        date="11/09/2019";
+//
+//        title=db.getNoticeValue(ID,"TITLE");
+//        content=db.getNoticeValue(ID,"DES");
+//        postby="Mr.Avishka";
+//        date="11/09/2019";
     }
 }

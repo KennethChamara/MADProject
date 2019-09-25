@@ -84,4 +84,6 @@
     <string name="addnoticeforbutton">Add Notice</string>
     <string name="listnoticeforbutton">List Notice</string>
     <string name="imagedesczzz">image for title</string>
+    <string name="image">Image :</string>
+    <string name="choose_image">Choose Image</string>
 </resources>

@@ -26,11 +26,12 @@ public class NoticeDBhelper extends SQLiteOpenHelper {
                 UsersMaster.Notice._ID +" INTEGER PRIMARY KEY AUTOINCREMENT,"+
                 UsersMaster.Notice.COLUMN_NAME_TITLE + " TEXT," +
                 UsersMaster.Notice.COLUMN_NAME_DESCRIPTION + " TEXT," +
-                UsersMaster.Notice.COLUMN_NAME_DATE + " TEXT)";
+                UsersMaster.Notice.COLUMN_NAME_DATE + " TEXT," +
+                UsersMaster.Notice.COLUMN_NAME_IMAGE + " blob)";
         sqLiteDatabase.execSQL(SQL_CREATE_ENTERIS);
     }
 
-    public boolean addnotice(String title,String des){
+    public boolean addnotice(String title,String des,byte[] img){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -41,6 +42,7 @@ public class NoticeDBhelper extends SQLiteOpenHelper {
         values.put(UsersMaster.Notice.COLUMN_NAME_TITLE,title);
         values.put(UsersMaster.Notice.COLUMN_NAME_DESCRIPTION,des);
         values.put(UsersMaster.Notice.COLUMN_NAME_DATE,toDay);
+        values.put(UsersMaster.Notice.COLUMN_NAME_IMAGE,img);
 
         long newRowId = db.insert(UsersMaster.Notice.TABLE_NAME,null,values);
 
@@ -89,42 +91,13 @@ public class NoticeDBhelper extends SQLiteOpenHelper {
     }
 
 
-    public ArrayList readAllNotice(String key){
+    public Cursor readAllNotice(){
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("select * from " + UsersMaster.Notice.TABLE_NAME + " order by " + UsersMaster.Notice.COLUMN_NAME_DATE + " desc" ,null);
-
-        ArrayList Title = new ArrayList<String>();
-        ArrayList des  = new ArrayList<String>();
-        ArrayList date = new ArrayList<String>();
-        ArrayList id = new ArrayList<String>();
-
-        while(cursor.moveToNext()){
-            String ID = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice._ID));
-            String title = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_TITLE));
-            String Des = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_DESCRIPTION));
-
-            id.add(ID);
-            Title.add(title);
-            des.add(Des);
-            //date.add("Date");
-        }
-        cursor.close();
-
-        switch (key){
-            case "ID" :
-                return id;
-            case "TITLE":
-                return Title;
-            case "DES":
-                return des;
-            case "DATE":
-                return date;
-            default:
-                return null;
-        }
+        Cursor cursor1 = db.rawQuery("select * from " + UsersMaster.Notice.TABLE_NAME + " order by " + UsersMaster.Notice.COLUMN_NAME_DATE + " desc" ,null);
+        return cursor1;
     }
 
-    public String getNoticeValue(String ID,String key){
+    public Cursor getNoticeValue(String ID){
         SQLiteDatabase db = getReadableDatabase();
         String title = "empty";
         String Des = "empty";
@@ -134,7 +107,9 @@ public class NoticeDBhelper extends SQLiteOpenHelper {
         String[] projection = {
                 UsersMaster.Notice._ID,
                 UsersMaster.Notice.COLUMN_NAME_TITLE,
-                UsersMaster.Notice.COLUMN_NAME_DESCRIPTION
+                UsersMaster.Notice.COLUMN_NAME_DESCRIPTION,
+                UsersMaster.Notice.COLUMN_NAME_DATE,
+                UsersMaster.Notice.COLUMN_NAME_IMAGE
         };
 
 // Filter results WHERE "title" = 'My Title'
@@ -152,22 +127,10 @@ public class NoticeDBhelper extends SQLiteOpenHelper {
                 null,                   // don't filter by row groups
                 null              // The sort order
         );
-        if(cursor.moveToFirst()){
-            //int ID = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice._ID)));
-            title = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_TITLE));
-            Des = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_DESCRIPTION));
-        }
-        cursor.close();
 
-        switch (key){
-            case "TITLE":
-                return title;
-            case "DES":
-                return Des;
-            default:
-                return null;
-        }
+        return cursor;
     }
+
 
 
 

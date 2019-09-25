@@ -16,6 +16,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -30,6 +31,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
@@ -106,7 +108,11 @@ public class addNotice extends AppCompatActivity {
 
         add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                boolean res = db.addnotice(title.getText().toString(),des.getText().toString());
+
+                String Title = title.getText().toString();
+                String Des = des.getText().toString();
+                byte[] imageByte = imageViewToByte(image);
+                boolean res = db.addnotice(Title,Des,imageByte);
 
                 if (res == true) {
                     Intent intent=new Intent(getApplicationContext(),AdminNoticeList.class );
@@ -119,6 +125,8 @@ public class addNotice extends AppCompatActivity {
 
                 emptytext();
             }
+
+
         });
 
 
@@ -129,6 +137,14 @@ public class addNotice extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),ress,Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private byte[] imageViewToByte(ImageView image) {
+        Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG,100,stream);
+        byte[] byteArray = stream.toByteArray();
+        return byteArray;
     }
 
     @Override
@@ -151,18 +167,19 @@ public class addNotice extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-    if(requestCode == REQUEST_CODE_GALLERY && requestCode == RESULT_OK && data != null){
-        Uri uri = data.getData();
 
-        try {
-            InputStream inputStream = getContentResolver().openInputStream(uri);
-            Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-            image.setImageBitmap(bitmap);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        if(requestCode == REQUEST_CODE_GALLERY){
+          Uri uri = data.getData();
+
+          try{
+              InputStream inputStream = getContentResolver().openInputStream(uri);
+              Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+              image.setImageBitmap(bitmap);
+          } catch (FileNotFoundException e) {
+              e.printStackTrace();
+          }
+
         }
-
-    }
         super.onActivityResult(requestCode, resultCode, data);
     }
 

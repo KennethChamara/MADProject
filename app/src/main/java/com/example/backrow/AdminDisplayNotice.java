@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class AdminDisplayNotice extends AppCompatActivity {
@@ -15,6 +18,7 @@ public class AdminDisplayNotice extends AppCompatActivity {
     EditText Title,Content,postBy,date;
     NoticeDBhelper db = new NoticeDBhelper(this);
     String title,content,postby,Date,ID;
+    ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +35,9 @@ public class AdminDisplayNotice extends AppCompatActivity {
         Content = findViewById(R.id.updatecontent);
         postBy = findViewById(R.id.updatepostby);
         date = findViewById(R.id.updatedate);
+        image = findViewById(R.id.admin_dis_notice_image);
 
         getvalue();
-
-        Title.setText(title);
-        Content.setText(content);
-        postBy.setText("Mr.Avishka");
-        date.setText("11/09/2019");
 
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,10 +72,25 @@ public class AdminDisplayNotice extends AppCompatActivity {
 
     public void getvalue(){
 
-            title=db.getNoticeValue(ID,"TITLE");
-            content=db.getNoticeValue(ID,"DES");
-            postby="Mr.Avishka";
-            Date="11/09/2019";
+        byte[] img = null;
 
+        Cursor cursor = db.getNoticeValue(ID);
+
+        if(cursor.moveToFirst()){
+            //int ID = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice._ID)));
+            title = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_TITLE));
+            content = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_DESCRIPTION));
+            Date = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_DATE));
+            img = cursor.getBlob(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_IMAGE));
+        }
+        cursor.close();
+
+        Bitmap bitmap = BitmapFactory.decodeByteArray(img,0,img.length);
+
+        Title.setText(title);
+        Content.setText(content);
+        postBy.setText("Mr.Avishka");
+        date.setText(Date);
+        image.setImageBitmap(bitmap);
     }
 }
