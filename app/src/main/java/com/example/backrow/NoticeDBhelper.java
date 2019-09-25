@@ -53,7 +53,7 @@ public class NoticeDBhelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean updatenotice(String title,String des,String ID){
+    public boolean updatenotice(String title,String des,String ID,byte[] imageByte){
         SQLiteDatabase db = getWritableDatabase();
 
         Date date = new Date();
@@ -65,6 +65,7 @@ public class NoticeDBhelper extends SQLiteOpenHelper {
         values.put(UsersMaster.Notice.COLUMN_NAME_TITLE,title);
         values.put(UsersMaster.Notice.COLUMN_NAME_DESCRIPTION,des);
         values.put(UsersMaster.Notice.COLUMN_NAME_DATE,toDay);
+        values.put(UsersMaster.Notice.COLUMN_NAME_IMAGE,imageByte);
 
         String selection = UsersMaster.Notice._ID + " LIKE ?";
         String[] selectionArgs = { ID };

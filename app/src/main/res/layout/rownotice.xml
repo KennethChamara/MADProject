@@ -53,7 +53,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
-            android:contentDescription="notist list image" />
+            android:contentDescription="@string/listeview_image" />
 
     </RelativeLayout>
 

@@ -1,24 +1,40 @@
 package com.example.backrow;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
 public class AdminDisplayNotice extends AppCompatActivity {
-    Button Update,Delete;
+    Button Update,Delete,btnChoose;
     EditText Title,Content,postBy,date;
     NoticeDBhelper db = new NoticeDBhelper(this);
     String title,content,postby,Date,ID;
     ImageView image;
+    private static final int REQUEST_CODE_GALLERY = 999;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +46,7 @@ public class AdminDisplayNotice extends AppCompatActivity {
 
         Update = findViewById(R.id.update);
         Delete = findViewById(R.id.delete);
+        btnChoose = (Button)findViewById(R.id.notice_update_choose_image);
 
         Title = findViewById(R.id.updateTitle);
         Content = findViewById(R.id.updatecontent);
@@ -39,10 +56,13 @@ public class AdminDisplayNotice extends AppCompatActivity {
 
         getvalue();
 
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean res = db.updatenotice(Title.getText().toString(),Content.getText().toString(),ID);
+                byte[] imageByte = imageViewToByte(image);
+                boolean res = db.updatenotice(Title.getText().toString(),Content.getText().toString(),ID,imageByte);
 
                 if (res == true) {
                     Toast.makeText(getApplicationContext(), "updated", Toast.LENGTH_SHORT).show();
@@ -68,6 +88,61 @@ public class AdminDisplayNotice extends AppCompatActivity {
                 }
             }
         });
+
+        btnChoose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityCompat.requestPermissions(
+                        AdminDisplayNotice.this,
+                        new String[] {Manifest.permission.READ_EXTERNAL_STORAGE},
+                        REQUEST_CODE_GALLERY
+                );
+            }
+        });
+    }
+
+    private byte[] imageViewToByte(ImageView image) {
+        Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG,100,stream);
+        byte[] byteArray = stream.toByteArray();
+        return byteArray;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        if (requestCode == REQUEST_CODE_GALLERY){
+            if (grantResults.length >0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                startActivityForResult(intent,REQUEST_CODE_GALLERY);
+            } else {
+                Toast.makeText(getApplicationContext(),"You don't have premission",Toast.LENGTH_SHORT);
+            }
+
+            return;
+        }
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if(requestCode == REQUEST_CODE_GALLERY){
+            Uri uri = data.getData();
+
+            try{
+                InputStream inputStream = getContentResolver().openInputStream(uri);
+                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                image.setImageBitmap(bitmap);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     public void getvalue(){

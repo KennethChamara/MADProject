@@ -86,4 +86,6 @@
     <string name="imagedesczzz">image for title</string>
     <string name="image">Image :</string>
     <string name="choose_image">Choose Image</string>
+    <string name="user_notice_img_des">this image will retriew from datebase to user notice</string>
+    <string name="listeview_image">this image for display in the list view</string>
 </resources>

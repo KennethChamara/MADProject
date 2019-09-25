@@ -20,18 +20,34 @@
 
             <Button
                 android:id="@+id/update"
+                style="@style/AlertDialog.AppCompat.Light"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Update" />
+                android:text="@string/update" />
 
             <Button
                 android:id="@+id/delete"
+                style="@style/AlertDialog.AppCompat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Delete" />
+                android:text="@string/delete" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/notice_update_choose_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_image" />
+
+        <ImageView
+            android:id="@+id/admin_dis_notice_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/user_notice_img_des"
+            app:srcCompat="@drawable/download" />
+
 
         <EditText
             android:id="@+id/updateTitle"
@@ -41,20 +57,13 @@
             android:ems="10"
             android:gravity="center"
             android:inputType="textPersonName"
-            android:text="Name" />
-
-        <ImageView
-            android:id="@+id/admin_dis_notice_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/download" />
+            android:autofillHints="" />
 
         <MultiAutoCompleteTextView
             android:id="@+id/updatecontent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MultiAutoCompleteTextView"
-            android:background="@null"/>
+            android:background="@null" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,7 +78,7 @@
                 android:background="@null"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/updatedate"
@@ -79,7 +88,7 @@
                 android:background="@null"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:autofillHints="" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
