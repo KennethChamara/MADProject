@@ -42,7 +42,6 @@ public class navgation extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
 
                     case  R.id.db:
-
                     startActivity(new Intent(navgation.this, studentquiz.class));
                     break;
 

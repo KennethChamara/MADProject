@@ -37,13 +37,13 @@
 
                 android:layout_marginTop="58dp"
                 android:text="@string/studentid"
-                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintEnd_toStartOf="@+id/add_title"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/add_title"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -80,7 +80,7 @@
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText"
+                app:layout_constraintTop_toBottomOf="@+id/add_title"
                 tools:targetApi="o" />
 
 

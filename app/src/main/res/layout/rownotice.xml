@@ -6,7 +6,7 @@
     android:padding="45dp">
 
     <TextView
-        android:id="@+id/ntitle"
+        android:id="@+id/user_notice_title"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:text=""
