@@ -88,4 +88,8 @@
     <string name="choose_image">Choose Image</string>
     <string name="user_notice_img_des">this image will retriew from datebase to user notice</string>
     <string name="listeview_image">this image for display in the list view</string>
+    <string name="add_examtype">Add ExamType</string>
+    <string name="add_marks">Add Marks</string>
+    <string name="list_marks">List Marks</string>
+    <string name="back">Back</string>
 </resources>

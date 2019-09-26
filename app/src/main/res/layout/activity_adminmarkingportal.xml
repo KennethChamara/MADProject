@@ -5,105 +5,86 @@
     android:id="@+id/size"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/marksdashbord"
+    android:background="@drawable/marksbackground"
     android:orientation="vertical"
     tools:context=".adminmarkingportal">
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="163dp"
-        android:background="@drawable/markingportaltheme"
-        android:text="@string/adminMarkingportal"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="50sp"
-        android:id="@+id/view1" />
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="305dp"
+                android:layout_height="227dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/buttonallignment"
+                android:src="@drawable/marksportallogo"></ImageView>
+
+            <LinearLayout
+                android:layout_marginTop="45dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:id="@+id/addExamTypebtn"
+                    android:layout_width="240dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/marksbuttoncustomized"
+                    android:gravity="center"
+
+                    android:text="@string/add_examtype" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="240dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="8dp"
+
+                    android:background="@drawable/marksbuttoncustomized"
+                    android:text="@string/add_marks" />
+
+                <Button
+                    android:id="@+id/buton3"
+                    android:layout_width="240dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+
+                    android:background="@drawable/marksbuttoncustomized"
+                    android:text="@string/list_marks" />
 
 
-        <Button
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            android:id="@+id/button1"
-            android:layout_width="243dp"
-            android:layout_height="88dp"
-
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="83dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="85dp"
-            android:layout_marginBottom="45sp"
-            android:text="@string/marksbutton1"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="25sp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="35dp"
+                    android:text="@string/back"
+                    android:background="@drawable/backbutton"/>
 
 
-        <Button
+            </RelativeLayout>
 
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="79dp"
-
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="87dp"
-            android:layout_marginLeft="20sp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="81dp"
-            android:layout_marginRight="20sp"
-            android:layout_marginBottom="45sp"
-            android:text="@string/updatedeletebutton"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="25sp" />
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-        <Button
-
-            android:id="@+id/buton3"
-            android:layout_width="wrap_content"
-            android:layout_height="79dp"
-
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="87dp"
-            android:layout_marginLeft="20sp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="81dp"
-            android:layout_marginRight="20sp"
-            android:layout_marginBottom="45sp"
-            android:text="List marks"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="25sp" />
-
-    </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 
