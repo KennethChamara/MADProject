@@ -19,10 +19,14 @@ public class marksdbhelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase mksdb) {
-       // mksdb.execSQL("CREATE TABLE  "+ examtype.EXAMTYPE_TABLE +"( " +examtype.EXAMTYPEID + "  " + " INTEGER PRIMARY KEY AUTOINCREMENT," +  " "  + examtype.EXAMVESION + " " + " TEXT)");
-        mksdb.execSQL("CREATE TABLE  "+marks.MARKS_TABLE +"( " +marks.MARKSID + " " + "INTEGER PRIMARY KEY AUTOINCREMENT," + " "+marks.STUDENTID +  " "  +  " TEXT,"  +   " "  +marks.MARKS   +  " "  + " REAL, " + marks.MARKSCATEGORY + " " + "TEXT )");
+       // mksdb.execSQL("CREATE TABLE  "+ examtype.EXAMTYPE_TABLE +"( " +examtype.EXAMTYPEID + " INTEGER PRIMARY KEY AUTOINCREMENT," examtype.EXAMVESION + " " + " TEXT)");
 
-
+        mksdb.execSQL("CREATE TABLE  " + marks.MARKS_TABLE +"( " +
+                marks.MARKSID  + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                marks.STUDENTID +  " TEXT,"  +
+                marks.MARKS   + " REAL," +
+                marks.MARKSCATEGORY + " TEXT )"
+        );
     }
 
     @Override

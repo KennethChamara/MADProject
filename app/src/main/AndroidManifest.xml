@@ -32,7 +32,6 @@
         <activity android:name=".Quiz_opition" />
         <activity android:name=".ListQuiz" />
         <activity android:name=".addQuiz" />
-        <activity android:name=".Add_Exam_Type"></activity>
         <activity android:name=".VideoActivity2_Admin" />
         <activity android:name=".VideoActivity1_Admin"></activity>
         <activity android:name=".VideoActivity2" />

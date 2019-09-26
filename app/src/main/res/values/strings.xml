@@ -92,4 +92,18 @@
     <string name="add_marks">Add Marks</string>
     <string name="list_marks">List Marks</string>
     <string name="back">Back</string>
+    <string name="androchunk">Androchunk</string>
+    
+    
+    <string-array name="Spinner_Items">
+        <item>Final Exam</item>
+        <item>Mid Exam</item>
+        <item>Spot Test</item>
+        <item>Assignment1</item>
+        <item>Assignment2</item>
+        <item>Assignment3</item>
+
+</string-array>
+    
+    
 </resources>

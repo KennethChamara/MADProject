@@ -31,7 +31,44 @@
                 android:layout_marginTop="90dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="30dp"
-                android:background="@drawable/Exam_Types"></ImageView>
+                android:background="@drawable/exam_types"></ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_margin="20dp">
+
+
+                <EditText
+                    android:layout_width="260dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext"
+                    android:hint="Add marks category"
+
+                    android:textColor="#000000"></EditText>
+
+                <Button
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add"
+                    android:layout_weight="1"
+                    android:background="@drawable/addbutton"></Button>
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/coloredSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+
+            </Spinner>
+
+
 
 
         </LinearLayout>

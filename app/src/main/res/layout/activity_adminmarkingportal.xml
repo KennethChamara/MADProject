@@ -39,22 +39,14 @@
                 android:orientation="vertical"
                 >
 
-                <Button
-                    android:id="@+id/addExamTypebtn"
-                    android:layout_width="240dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/marksbuttoncustomized"
-                    android:gravity="center"
 
-                    android:text="@string/add_examtype" />
 
                 <Button
                     android:id="@+id/button1"
                     android:layout_width="240dp"
                     android:layout_height="80dp"
                     android:layout_marginLeft="8dp"
-
+                    android:layout_marginBottom="25dp"
                     android:background="@drawable/marksbuttoncustomized"
                     android:text="@string/add_marks" />
 
