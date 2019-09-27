@@ -78,28 +78,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/add" />
+            android:text="@string/add"
+            android:background="#661FFF"
+            />
 
         <Button
             android:id="@+id/btnUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/update" />
+            android:text="@string/update"
+            android:background="#661FFF"
+           />
 
         <Button
             android:id="@+id/btnshow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/show" />
+            android:text="@string/show"
+            android:background="#64B5F6"
+           />
 
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/delete" />
+            android:text="@string/delete"
+            android:background="#FF1744"/>
     </LinearLayout>
 
 

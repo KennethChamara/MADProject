@@ -79,7 +79,8 @@
         android:layout_marginStart="137dp"
         android:layout_marginEnd="323dp"
         android:layout_marginBottom="126dp"
-        android:background="#635A5A"
+
+        android:background="#661FFF"
 
         android:onClick="onClick"
         android:text="Continue"

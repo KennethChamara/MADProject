@@ -1,8 +1,5 @@
 package com.example.backrow;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -18,7 +15,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -88,7 +86,7 @@ public class noticePanel extends AppCompatActivity {
         ArrayList<String> pstby;
         ArrayList<Bitmap> bitmaps;
 
-        myAdapter(Context c,ArrayList<String> t,ArrayList<String> des,ArrayList<Bitmap> bitmaps){
+        myAdapter(Context c,ArrayList<String> t,ArrayList<String> des,ArrayList<Bitmap> bitmaps,ArrayList<String>  date,ArrayList<String> pstby ){
             super(c,R.layout.rownotice,R.id.user_notice_title,t);
             this.context = c;
             this.title = t;
