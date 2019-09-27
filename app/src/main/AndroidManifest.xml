@@ -20,7 +20,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
         </activity>
@@ -30,10 +30,11 @@
         <activity android:name=".VideoActivity1_Admin" />
         <activity android:name=".User_Option" />
         <activity android:name=".Quiz_opition" />
+        <activity android:name=".User_Manger" />
+        <activity android:name=".List_Users" />
         <activity android:name=".ListQuiz" />
         <activity android:name=".addQuiz" />
-        <activity android:name=".VideoActivity2_Admin" />
-        <activity android:name=".VideoActivity1_Admin"></activity>
+
         <activity android:name=".VideoActivity2" />
         <activity android:name=".VideoActivity1">
             <intent-filter>
@@ -47,7 +48,7 @@
         <activity android:name=".addNotice" />
         <activity android:name=".listMarks" />
 
-        <activity android:name=".listMarks" />
+
         <activity android:name=".displayNotice" />
         <activity android:name=".updatedeletemarks" />
         <activity android:name=".myquiz">

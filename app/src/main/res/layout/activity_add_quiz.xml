@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:padding="2dp"
         android:paddingBottom="16dp"
-        android:text="ADD Question "
+        android:text="@string/txtId"
         android:textAlignment="center"
         android:textColor="#3340E3"
         android:textSize="24sp" />
@@ -25,8 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/txtId"
-        android:inputType="textPersonName" />
+        android:hint="@string/QuestionID"
+        android:inputType="textPersonName"
+         />
 
     <EditText
         android:id="@+id/txtQuestion"
