@@ -30,7 +30,7 @@ public class dash extends AppCompatActivity {
 
     public void onClicknotice(View view){
 
-        startActivity(new Intent(dash.this,adminNoticeNavigation.class));
+        startActivity(new Intent(dash.this,AdminNoticeList.class));
 
 
     }
