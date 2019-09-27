@@ -3,12 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <stroke
-        android:color="@color/cardview_light_background"
-        android:width="2dp"
 
-
-        ></stroke>
     <corners
         android:radius="50dp"
         >
