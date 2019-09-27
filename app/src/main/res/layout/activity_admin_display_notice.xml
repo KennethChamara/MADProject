@@ -25,20 +25,22 @@
                 style="@style/AlertDialog.AppCompat.Light"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="2dp"
-                android:background="@drawable/marksbuttoncustomized"
-                android:text="@string/update" />
+                android:layout_weight="1"
+                android:background="@drawable/addbutton"
+                android:text="@string/update"
+                android:textColor="@color/darkGray" />
 
             <Button
                 android:id="@+id/delete"
                 style="@style/AlertDialog.AppCompat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/deletebutton"
-                android:layout_margin="2dp"
-                android:text="@string/delete" />
+                android:text="@string/delete"
+                android:textColor="@color/darkGray" />
 
         </LinearLayout>
 

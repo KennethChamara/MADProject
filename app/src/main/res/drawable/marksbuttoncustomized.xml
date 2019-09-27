@@ -16,8 +16,8 @@
     </corners>
 
     <gradient
-        android:startColor="@color/colorPrimary"
-        android:endColor=" #80ff80"
+        android:startColor=" #00ff00"
+        android:endColor="#66ffff"
 
         ></gradient>
 
