@@ -105,8 +105,6 @@
     <string name="enter_category">Enter category</string>
 
 
-
-
     <string name="txtId">ADD Question</string>
     <string name="btnchange">Change</string>
     <string name="btnList">List</string>
@@ -119,7 +117,12 @@
     <string name="QuestionID">Enter Question ID</string>
     <string name="userid">Enter USer Id</string>
     <string name="UserId">Enter User ID</string>
-
+    <string name="Final">Final Exam</string>
+    <string name="Mid">Mid Exam</string>
+    <string name="Spot">Spot Test</string>
+    <string name="Asgment1">Assignment1</string>
+    <string name="Asgment2">Assignment2</string>
+    <string name="Asgment3">Assignment3</string>
 
     <string-array name="Spinner_Items">
         <item>Final Exam</item>

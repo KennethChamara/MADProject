@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".makslistNavigation"></activity>
+        <activity android:name=".maksListUserNav" />
         <activity android:name=".update_delete_marks" />
         <activity android:name=".markscategorylist" />
         <activity android:name=".AdminDisplayNotice" />
@@ -45,7 +47,6 @@
         <activity android:name=".adminNoticeNavigation" />
         <activity android:name=".addNotice" />
         <activity android:name=".displayNotice" />
-        <activity android:name=".updatedeletemarks" />
         <activity android:name=".myquiz">
             <intent-filter>
                 <action android:name=".myquiz" />

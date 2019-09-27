@@ -52,7 +52,7 @@ public class update_delete_marks extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 double mark = Double.parseDouble(viewMarks.getText().toString());
-                long val = db.updateMarks(viewstdId.getText().toString(),mark,marksId);
+                int val = db.updateMarks(viewstdId.getText().toString(),mark,marksId);
                 if (val > 0){
                     Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(update_delete_marks.this,markscategorylist.class );
