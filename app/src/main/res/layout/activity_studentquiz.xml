@@ -32,6 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
-        android:text="Start Quiiz" />
+        android:text="Start Quiiz"
+        android:background="#5E35B1"
+        android:textColor="@color/white"/>
 
 </RelativeLayout>
