@@ -107,6 +107,20 @@
 
 
 
+    <string name="txtId">ADD Question</string>
+    <string name="btnchange">Change</string>
+    <string name="btnList">List</string>
+    <string name="txtManegeView">Manage Users</string>
+    <string name="txtUserName">Enter UserName</string>
+    <string name="txtUserEmail">Enter Email</string>
+    <string name="txtUserPassword" >Enter Password</string>
+    <string name="txtUserRole">Enter the Role</string>
+    <string name="txtUserGender">Enter Gender</string>
+    <string name="QuestionID">Enter Question ID</string>
+    <string name="userid">Enter USer Id</string>
+    <string name="UserId">Enter User ID</string>
+
+
     <string-array name="Spinner_Items">
         <item>Final Exam</item>
         <item>Mid Exam</item>

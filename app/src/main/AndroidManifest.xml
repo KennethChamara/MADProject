@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.backrow">
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,17 +22,21 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+
         <activity android:name=".VideoActivity2_Admin" />
         <activity android:name=".VideoActivity1_Admin" />
         <activity android:name=".User_Option" />
         <activity android:name=".Quiz_opition" />
+        <activity android:name=".User_Manger" />
+        <activity android:name=".List_Users" />
         <activity android:name=".ListQuiz" />
         <activity android:name=".addQuiz" />
-        <activity android:name=".VideoActivity2_Admin" />
-        <activity android:name=".VideoActivity1_Admin" />
+
         <activity android:name=".VideoActivity2" />
         <activity android:name=".VideoActivity1">
             <intent-filter>

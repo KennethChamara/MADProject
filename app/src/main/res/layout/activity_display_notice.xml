@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_primary"
     tools:context=".displayNotice">
 
     <LinearLayout
@@ -15,7 +14,7 @@
         <ImageView
             android:id="@+id/user_display_notice"
             android:layout_width="match_parent"
-            android:layout_height="297dp"
+            android:layout_height="231dp"
             android:background="#00FAE8E8"
             android:contentDescription="@string/user_notice_img_des"
             app:srcCompat="@drawable/notice" />
@@ -24,21 +23,20 @@
             android:id="@+id/user_notice_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="7dp"
             android:textAlignment="viewStart"
-            android:textColor="@color/deepPurple"
+            android:textColor="@color/darkGray"
             android:textSize="30sp"
             android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/user_notice_content"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:textColor="@color/darkGray"
-            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -55,5 +53,17 @@
                 android:layout_weight="1"
                 android:textAlignment="textEnd" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/user_notice_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
     </LinearLayout>
 </ScrollView>
