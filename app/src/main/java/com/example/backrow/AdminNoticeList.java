@@ -24,6 +24,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+//this activity will use only by Admin and display all notices and provide add button
 public class AdminNoticeList extends AppCompatActivity {
     public static final String EXTRA_MESSAGE_ID = "com.example.backrow.ID";
     NoticeDBhelper db = new NoticeDBhelper(this);
@@ -44,7 +45,7 @@ public class AdminNoticeList extends AppCompatActivity {
         bitmaps = new ArrayList<Bitmap>();
         listView = findViewById(R.id.listview);
 
-        setvaluse();
+        setvaluse();//for set values for arrays
 
         myAdapter adapter = new myAdapter(this, ntitle, ndis,bitmaps);
         listView.setAdapter(adapter);
@@ -70,9 +71,12 @@ public class AdminNoticeList extends AppCompatActivity {
 
     }
 
+    //get data from database and assign into array lists
     public void setvaluse() {
+        //readAllNotice() will return Cursor object
         Cursor cursor = db.readAllNotice();
 
+        //untill there is values in cursor
         while(cursor.moveToNext()){
             String id = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice._ID));
             String title = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_TITLE));
@@ -86,9 +90,10 @@ public class AdminNoticeList extends AppCompatActivity {
             ndis.add(Des);
             bitmaps.add(bitmap);
         }
-        cursor.close();
+        cursor.close(); //close cursor
     }
 
+    //customized ArrayAdapter
     class myAdapter extends ArrayAdapter<String> {
 
         Context context;

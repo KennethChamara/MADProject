@@ -30,6 +30,7 @@ import java.io.InputStream;
 
 import static com.example.backrow.NoticeNotification.CHANNEL_ID;
 
+//this activity will use only by Admin to add notice
 public class addNotice extends AppCompatActivity {
     private NotificationManagerCompat notificationManager;
     private Button add,reset,btnChoose;
@@ -39,7 +40,7 @@ public class addNotice extends AppCompatActivity {
     private static final String  adds = "Successfully Added";
     private static final String fail = "adding Faild";
     private static final String ress = "Reset";
-    private static final int REQUEST_CODE_GALLERY = 999;
+    private static final int REQUEST_CODE_GALLERY = 999; //gallery access code
 
 
     @Override
@@ -47,6 +48,7 @@ public class addNotice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_notice);
 
+        //initialize objects
         db = new NoticeDBhelper(this);
         notificationManager = NotificationManagerCompat.from(this);
         add = (Button)findViewById(R.id.addnoticebuton);
@@ -56,15 +58,18 @@ public class addNotice extends AppCompatActivity {
         des = findViewById(R.id.updatecontent);
         image = findViewById(R.id.notice_image);
 
+        //validate
+        //if user keep empty any textfeald disable add button
         title.addTextChangedListener(textWatcher);
         des.addTextChangedListener(textWatcher);
 
+        //set action onclick on choose image button
         btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ActivityCompat.requestPermissions(
                         addNotice.this,
-                        new String[] {Manifest.permission.READ_EXTERNAL_STORAGE},
+                        new String[] {Manifest.permission.READ_EXTERNAL_STORAGE},//request premission
                         REQUEST_CODE_GALLERY
                 );
             }
@@ -99,31 +104,34 @@ public class addNotice extends AppCompatActivity {
         });
 */
 
+        //set action onclick on add button
         add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                String Title = title.getText().toString();
-                String Des = des.getText().toString();
-                byte[] imageByte = imageViewToByte(image);
-                boolean res = db.addnotice(Title,Des,imageByte);
-
+                String Title = title.getText().toString();//get title values
+                String Des = des.getText().toString(); // get description values
+                byte[] imageByte = imageViewToByte(image); //call method to convert image into bytes
+                boolean res = db.addnotice(Title,Des,imageByte); //call function to add values into database
+                //addnotice() method will return true if action successfull
                 if (res == true) {
                     Intent intent=new Intent(getApplicationContext(),AdminNoticeList.class );
                     startActivity(intent);
                 } else {
+                    //give message if adding failed
                     Toast.makeText(getApplicationContext(), fail, Toast.LENGTH_SHORT).show();
                 }
 
+                //set notification
                 sedNotification(new View(getApplicationContext()));
 
+                //empty text feilds after adding
                 emptytext();
             }
 
 
         });
 
-
-
+        //set action onclick on reset button
         reset.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 emptytext();
@@ -132,6 +140,8 @@ public class addNotice extends AppCompatActivity {
         });
     }
 
+    //method to convert image into bytes
+    //this method will return byte array
     private byte[] imageViewToByte(ImageView image) {
         Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -140,7 +150,7 @@ public class addNotice extends AppCompatActivity {
         return byteArray;
     }
 
-    @Override
+    @Override // Override method to request permissions
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
         if (requestCode == REQUEST_CODE_GALLERY){
@@ -158,7 +168,7 @@ public class addNotice extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
-    @Override
+    @Override// Override method to set image
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
         if(requestCode == REQUEST_CODE_GALLERY){
@@ -190,6 +200,7 @@ public class addNotice extends AppCompatActivity {
         notificationManager.notify(1,notification);
     }
 
+    //to check is text fea empty
     private TextWatcher textWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {

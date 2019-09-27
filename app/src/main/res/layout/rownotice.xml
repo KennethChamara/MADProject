@@ -3,23 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="45dp">
+    android:padding="5dp"
+    >
 
     <RelativeLayout
-        android:layout_width="336dp"
-        android:layout_height="125dp">
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:background="@drawable/noticelistbg">
 
         <TextView
             android:id="@+id/ndis"
-            android:layout_width="221dp"
-            android:layout_height="wrap_content"
+            android:layout_width="288dp"
+            android:layout_height="126dp"
             android:layout_below="@+id/user_notice_title"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_toEndOf="@+id/notice_disply_img"
             android:text=""
             android:textAlignment="textStart"
@@ -34,12 +36,12 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
             android:text=""
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="@color/design_default_color_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -51,11 +53,14 @@
             android:layout_below="@+id/user_notice_title"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:contentDescription="@string/listeview_image" />
 
     </RelativeLayout>
+
+
 
 
 </LinearLayout>

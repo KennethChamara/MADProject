@@ -16,7 +16,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="49dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
 
             <Button
                 android:id="@+id/update"
@@ -24,6 +26,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:background="@drawable/marksbuttoncustomized"
                 android:text="@string/update" />
 
             <Button
@@ -32,43 +36,53 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/deletebutton"
+                android:layout_margin="2dp"
                 android:text="@string/delete" />
+
         </LinearLayout>
+
 
         <Button
             android:id="@+id/notice_update_choose_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="279dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+
+            android:background="@drawable/resetbutton"
             android:text="@string/choose_image" />
 
         <ImageView
             android:id="@+id/admin_dis_notice_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:contentDescription="@string/user_notice_img_des"
             app:srcCompat="@drawable/download" />
-
 
         <EditText
             android:id="@+id/updateTitle"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="7dp"
+            android:autofillHints=""
             android:background="@null"
             android:ems="10"
-            android:gravity="center"
             android:inputType="textPersonName"
-            android:autofillHints="" />
-
-        <MultiAutoCompleteTextView
-            android:id="@+id/updatecontent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null" />
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            tools:targetApi="o"
+            tools:ignore="LabelFor"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
 
             <EditText
                 android:id="@+id/updatepostby"
@@ -77,18 +91,33 @@
                 android:layout_weight="1"
                 android:background="@null"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" tools:targetApi="o"
+                tools:ignore="LabelFor" />
 
             <EditText
                 android:id="@+id/updatedate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:background="@null"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:autofillHints="" />
+                android:textAlignment="viewEnd"
+                tools:ignore="LabelFor" tools:targetApi="o"/>
         </LinearLayout>
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/updatecontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:textSize="18sp"
+            tools:ignore="LabelFor" />
+
     </LinearLayout>
 </ScrollView>

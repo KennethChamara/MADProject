@@ -22,6 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
+//this activity will use only by user and display all notices
 public class noticePanel extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE_ID = "com.example.backrow.ID";
@@ -40,10 +41,11 @@ public class noticePanel extends AppCompatActivity {
         bitmaps = new ArrayList<Bitmap>();
         listView = findViewById(R.id.listview);
 
-        setvaluse();
+        setvaluse();//for set values for arrays
 
         noticePanel.myAdapter adapter = new noticePanel.myAdapter(this, ntitle, ndis,bitmaps);
         listView.setAdapter(adapter);
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -57,9 +59,12 @@ public class noticePanel extends AppCompatActivity {
 
     }
 
+    //get data from database and assign into array lists
     public void setvaluse() {
+        //readAllNotice() will return Cursor object
         Cursor cursor = db.readAllNotice();
 
+        //untill there is values in cursor
         while(cursor.moveToNext()){
             String id = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice._ID));
             String title = cursor.getString(cursor.getColumnIndexOrThrow(UsersMaster.Notice.COLUMN_NAME_TITLE));
@@ -73,9 +78,10 @@ public class noticePanel extends AppCompatActivity {
             ndis.add(Des);
             bitmaps.add(bitmap);
         }
-        cursor.close();
+        cursor.close();//close cursor
     }
 
+    //customized ArrayAdapter
     class myAdapter extends ArrayAdapter<String> {
 
         Context context;

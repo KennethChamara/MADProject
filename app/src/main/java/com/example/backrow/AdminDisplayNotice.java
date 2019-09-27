@@ -27,6 +27,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
+//this activity will use only by admin this will display selected notice and allow to update and delete data
 public class AdminDisplayNotice extends AppCompatActivity {
     Button Update,Delete,btnChoose;
     EditText Title,Content,postBy,date;
@@ -41,6 +42,7 @@ public class AdminDisplayNotice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_display_notice);
 
+        // get intent message which is passed by AdminNoticeList class
         Intent intent = getIntent();
         ID = intent.getStringExtra(AdminNoticeList.EXTRA_MESSAGE_ID);
 
@@ -54,16 +56,19 @@ public class AdminDisplayNotice extends AppCompatActivity {
         date = findViewById(R.id.updatedate);
         image = findViewById(R.id.admin_dis_notice_image);
 
+        //set values for objects
         getvalue();
 
+        //close soft keybord
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
+        //set action for onclick on update button
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                byte[] imageByte = imageViewToByte(image);
+                byte[] imageByte = imageViewToByte(image);//call method to convert imagec into bytes
                 boolean res = db.updatenotice(Title.getText().toString(),Content.getText().toString(),ID,imageByte);
-
+                //updatenotice will return true if update was success
                 if (res == true) {
                     Toast.makeText(getApplicationContext(), "updated", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(),AdminNoticeList.class);
@@ -94,13 +99,14 @@ public class AdminDisplayNotice extends AppCompatActivity {
             public void onClick(View v) {
                 ActivityCompat.requestPermissions(
                         AdminDisplayNotice.this,
-                        new String[] {Manifest.permission.READ_EXTERNAL_STORAGE},
+                        new String[] {Manifest.permission.READ_EXTERNAL_STORAGE},//get permission to access gallery
                         REQUEST_CODE_GALLERY
                 );
             }
         });
     }
 
+    // method to convet image into byets
     private byte[] imageViewToByte(ImageView image) {
         Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -109,7 +115,7 @@ public class AdminDisplayNotice extends AppCompatActivity {
         return byteArray;
     }
 
-    @Override
+    @Override// overrided method to get permission
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
         if (requestCode == REQUEST_CODE_GALLERY){
@@ -127,7 +133,7 @@ public class AdminDisplayNotice extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
-    @Override
+    @Override // overrided method to set image
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
         if(requestCode == REQUEST_CODE_GALLERY){
@@ -145,6 +151,7 @@ public class AdminDisplayNotice extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+    // method to set values for objects by retrieving data from database
     public void getvalue(){
 
         byte[] img = null;
