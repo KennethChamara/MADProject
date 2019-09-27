@@ -12,15 +12,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class noticePanel extends AppCompatActivity {
 
@@ -88,7 +91,6 @@ public class noticePanel extends AppCompatActivity {
             this.context = c;
             this.title = t;
             this.description = des;
-            this.bitmaps = bitmaps;
         }
 
         @NonNull

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@drawable/marksbackground"
+    tools:context=".update_delete_marks">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonallignment"
+            android:padding="20dp"
+            app:srcCompat="@drawable/submitformtitle" />
+
+
+
+             <TextView
+                 android:id="@+id/updtestdId"
+                 android:textSize="35dp"
+                 android:layout_marginTop="12dp"
+                 android:layout_width="303dp"
+                 android:layout_height="73dp"
+                 android:layout_gravity="center_horizontal"
+                 android:background="@drawable/edittext"
+                 android:gravity="center"
+                 android:layout_marginBottom="38dp"/>
+
+         <EditText
+             android:id="@+id/updatecategory"
+             android:layout_marginTop="12dp"
+             android:layout_width="303dp"
+             android:layout_height="73dp"
+             android:layout_gravity="center_horizontal"
+             android:background="@drawable/edittext"
+             android:gravity="center"
+             android:hint="@string/enter_category"
+             android:textSize="18dp"
+             android:layout_marginRight="5dp"
+             android:layout_marginBottom="18dp"
+             android:layout_marginLeft="1dp"/>
+
+
+            <EditText
+                android:id="@+id/updatemarks"
+                android:layout_width="303dp"
+                android:layout_height="73dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:hint="Enter Marks"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/edittext"/>
+
+         <Button
+             android:id="@+id/updatebtn"
+             android:layout_width="match_parent"
+             android:layout_height="64dp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="19dp"
+             android:layout_marginRight="19dp"
+             android:layout_marginBottom="8dp"
+             android:layout_marginTop="20dp"
+             android:background="@drawable/circlebutton"
+             android:text="@string/update"/>
+
+
+         <Button
+             android:id="@+id/deletebtn"
+             android:layout_width="match_parent"
+             android:layout_height="64dp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="19dp"
+             android:layout_marginRight="19dp"
+             android:layout_marginTop="5dp"
+             android:background="@drawable/circlebutton"
+             android:text="@string/delete"/>
+
+
+         <Button
+             android:id="@+id/backbtn"
+             android:layout_width="match_parent"
+             android:layout_height="64dp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="19dp"
+             android:layout_marginRight="19dp"
+             android:layout_marginTop="5dp"
+             android:background="@drawable/circlebutton"
+             android:text="@string/backbtn"/>
+
+     </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+

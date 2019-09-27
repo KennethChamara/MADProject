@@ -1,10 +1,14 @@
 package marksDB;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
 
 import static java.sql.Types.REAL;
 
@@ -33,4 +37,44 @@ public class marksdbhelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+    public long addmarks(String StudentId,String examcategory,double exammarks){
+        SQLiteDatabase mks=getWritableDatabase();
+
+        ContentValues values=new ContentValues();
+        values.put(marks.STUDENTID,StudentId);
+        values.put(marks.MARKSCATEGORY,examcategory);
+        values.put(marks.MARKS,exammarks);
+
+        long newRowId=mks.insert(marks.MARKS_TABLE,null,values);
+
+        return newRowId;
+    }
+    public Cursor readAllmarkByCategory(String category)
+    {
+        SQLiteDatabase mks=getReadableDatabase();
+        String[] projection={
+                marks.MARKSID,
+                marks.STUDENTID,
+                marks.MARKS,
+                marks.MARKSCATEGORY
+        };
+        String selection = marks.MARKSCATEGORY + " = ?";
+        String[] selectionArgs = { category };
+
+        Cursor cus=mks.query(
+                marks.MARKS_TABLE,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+
+            return  cus;
+
+    }
+
+
+
 }

@@ -50,15 +50,30 @@
                     android:background="@drawable/marksbuttoncustomized"
                     android:text="@string/add_marks" />
 
-                <Button
-                    android:id="@+id/buton3"
-                    android:layout_width="240dp"
-                    android:layout_height="80dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="10dp"
+                <LinearLayout
 
-                    android:background="@drawable/marksbuttoncustomized"
-                    android:text="@string/list_marks" />
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+
+                    <Spinner
+                        android:id="@+id/coloredSpinner"
+                        android:layout_width="240dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginBottom="25dp"
+                        android:background="@drawable/marksbuttoncustomized"
+                        android:entries="@array/SpinnerList_Items"
+                        android:textAlignment="center">
+
+
+                    </Spinner>
+
+
+                </LinearLayout>
 
 
             </LinearLayout>

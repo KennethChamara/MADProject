@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
 
-public class adminmarkingportal extends AppCompatActivity {
+public class adminmarkingportal extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     Button bt1;
     Button bt2;
     Button bt3;
+    String examcategory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,14 +34,37 @@ public class adminmarkingportal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Spinner coloredSpinner =(Spinner)findViewById(R.id.coloredSpinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.SpinnerList_Items,
+                R.layout.color_spinner_layout
+        );
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        coloredSpinner.setAdapter(adapter);
+        coloredSpinner.setOnItemSelectedListener(this);
 
-     //  bt3.setOnClickListener(new View.OnClickListener() {
-           // @Override
-          //  public void onClick(View view) {
-              //  Intent intent=new Intent(adminmarkingportal.this,listMarks.class );
-             //   startActivity(intent);
-      //      }
-     //   });
+
 
     }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        if(i != 0) {
+            Intent intent=new Intent(adminmarkingportal.this,markscategorylist.class );
+            intent.putExtra("CATEGORY",adapterView.getSelectedItem().toString());
+            startActivity(intent);
+
+        }
+
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
+
 }
+

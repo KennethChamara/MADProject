@@ -4,7 +4,10 @@
     android:padding="10dp"
     android:text="Androchunk"
     android:textColor="#ff0000"
+    android:background="@drawable/marksbuttoncustomized"
     android:textSize="20sp"
+    android:gravity="center"
+    android:textAlignment="center"
     >
 
 

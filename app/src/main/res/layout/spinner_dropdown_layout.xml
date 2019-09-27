@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:text="@string/androchunk"
+    android:textAlignment="center"
+
     android:textColor="@color/colorPrimary"
     android:textSize="20sp">
 

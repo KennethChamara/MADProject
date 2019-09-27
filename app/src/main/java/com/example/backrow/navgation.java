@@ -55,10 +55,10 @@ public class navgation extends AppCompatActivity {
                         startActivity(new Intent(navgation.this, VideoActivity2.class));
                         break;
 
-                    case R.id.db3  :
-                        Toast.makeText(getApplicationContext(),"id is"+menuItem.getItemId(),Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(navgation.this, listMarks.class));
-                        break;
+                    //case R.id.db3  :
+                       // Toast.makeText(getApplicationContext(),"id is"+menuItem.getItemId(),Toast.LENGTH_SHORT).show();
+                       // startActivity(new Intent(navgation.this, listMarks.class));
+                       // break;
 
                     case R.id.db4  :
                         Toast.makeText(getApplicationContext(),"id is"+menuItem.getItemId(),Toast.LENGTH_SHORT).show();

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/studenid"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/stdId"
+            android:layout_width="89dp"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="214dp"
+            android:layout_height="88dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="79dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Marks"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/stdMarks"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
