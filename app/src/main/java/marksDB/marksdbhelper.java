@@ -75,6 +75,35 @@ public class marksdbhelper extends SQLiteOpenHelper {
 
     }
 
+    public int updateMarks(String sID,double mark,String markID){
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        values.put(marks.STUDENTID,sID);
+        values.put(marks.MARKS,mark);
+
+        String selection = marks.MARKSID + " LIKE ?";
+        String[] selectionArgs = { markID };
+
+        int count = db.update(
+                marks.MARKS_TABLE,
+                values,
+                selection,
+                selectionArgs);
+
+        return count;
+
+    }
+
+    public int deleteNotice(String ID){
+        SQLiteDatabase db = getWritableDatabase();
+        String selection =  marks.MARKSID + " LIKE ?";
+
+        String[] SelectionARGS =  {ID};
+        return db.delete(marks.MARKS_TABLE,selection,SelectionARGS);
+    }
+
 
 
 }

@@ -4,15 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import marksDB.marksdbhelper;
 
 public class update_delete_marks extends AppCompatActivity {
         String studentId;
         String Marks;
         String Studentcatgry;
         String marksId;
+        marksdbhelper db=new marksdbhelper(this);
 
         TextView viewstdId;
         EditText viewMarks;
@@ -42,9 +48,46 @@ public class update_delete_marks extends AppCompatActivity {
         deletebtn=(Button)findViewById(R.id.deletebtn);
         backbtn=(Button)findViewById(R.id.backbtn);
 
+        updatebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                double mark = Double.parseDouble(viewMarks.getText().toString());
+                long val = db.updateMarks(viewstdId.getText().toString(),mark,marksId);
+                if (val > 0){
+                    Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(update_delete_marks.this,markscategorylist.class );
+                    intent.putExtra("CATEGORY",viewcatagry.getText().toString());
+                    startActivity(intent);
+                }
+            }
+        });
+
+        deletebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                long val = db.deleteNotice(marksId);
+                if (val > 0){
+                    Toast.makeText(getApplicationContext(),"deleted",Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(update_delete_marks.this,markscategorylist.class );
+                    intent.putExtra("CATEGORY",viewcatagry.getText().toString());
+                    startActivity(intent);
+                }
+            }
+        });
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         viewstdId.setText(studentId);
         viewMarks.setText(Marks);
         viewcatagry.setText(Studentcatgry);
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
 
     }
 }

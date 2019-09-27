@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.backrow">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".update_delete_marks"></activity>
+        <activity android:name=".update_delete_marks" />
         <activity android:name=".markscategorylist" />
         <activity android:name=".AdminDisplayNotice" />
         <activity
@@ -22,12 +22,9 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
-
-
         <activity android:name=".VideoActivity2_Admin" />
         <activity android:name=".VideoActivity1_Admin" />
         <activity android:name=".User_Option" />
@@ -36,7 +33,6 @@
         <activity android:name=".List_Users" />
         <activity android:name=".ListQuiz" />
         <activity android:name=".addQuiz" />
-
         <activity android:name=".VideoActivity2" />
         <activity android:name=".VideoActivity1">
             <intent-filter>
@@ -103,6 +99,7 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 

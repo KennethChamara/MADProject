@@ -113,7 +113,7 @@
     <string name="txtManegeView">Manage Users</string>
     <string name="txtUserName">Enter UserName</string>
     <string name="txtUserEmail">Enter Email</string>
-    <string name="txtUserPassword" >Enter Password</string>
+    <string name="txtUserPassword">Enter Password</string>
     <string name="txtUserRole">Enter the Role</string>
     <string name="txtUserGender">Enter Gender</string>
     <string name="QuestionID">Enter Question ID</string>
