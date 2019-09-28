@@ -19,12 +19,13 @@
 
     <Button
         android:id="@+id/Final"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="@string/Final"
         android:background="@drawable/navimarkslist"
-        android:padding="15dp"/>
+        android:padding="26dp"/>
     <Button
         android:id="@+id/Mid"
         android:layout_width="match_parent"
@@ -32,7 +33,7 @@
         android:layout_margin="15dp"
         android:text="@string/Mid"
         android:background="@drawable/navimarkslist"
-        android:padding="15dp"/>
+        android:padding="26dp"/>
     <Button
         android:id="@+id/Spot"
         android:layout_width="match_parent"
@@ -40,7 +41,7 @@
         android:layout_margin="15dp"
         android:text="@string/Spot"
         android:background="@drawable/navimarkslist"
-        android:padding="15dp"/>
+        android:padding="26dp"/>
     <Button
         android:id="@+id/Assignment1"
         android:layout_width="match_parent"
@@ -48,7 +49,7 @@
         android:layout_margin="15dp"
         android:text="@string/Asgment1"
         android:background="@drawable/navimarkslist"
-        android:padding="15dp"/>
+        android:padding="26dp"/>
     <Button
         android:id="@+id/Assignment2"
         android:layout_width="match_parent"
@@ -56,7 +57,7 @@
         android:layout_margin="15dp"
         android:text="@string/Asgment2"
         android:background="@drawable/navimarkslist"
-        android:padding="15dp"/>
+        android:padding="26dp"/>
     <Button
         android:id="@+id/Assignment3"
         android:layout_width="match_parent"
@@ -64,7 +65,7 @@
         android:layout_margin="15dp"
         android:text="@string/Asgment3"
         android:background="@drawable/navimarkslist"
-        android:padding="15dp"/>
+        android:padding="26dp"/>
 
     </LinearLayout>
     </ScrollView>

@@ -78,6 +78,8 @@ public class update_delete_marks extends AppCompatActivity {
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent=new Intent(update_delete_marks.this,adminmarkingportal.class );
+                startActivity(intent);
 
             }
         });

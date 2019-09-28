@@ -23,7 +23,15 @@ public class adminmarkingportal extends AppCompatActivity implements AdapterView
 
 
         bt2=(Button)findViewById(R.id.button1);
-       //  bt3=(Button)findViewById(R.id.buton3);
+        bt3=(Button)findViewById(R.id.back);
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(adminmarkingportal.this,dash.class );
+                startActivity(intent);
+            }
+        });
+
 
 
 
